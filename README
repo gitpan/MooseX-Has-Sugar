@@ -2,10 +2,10 @@ NAME
     MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields.
 
 VERSION
-    Version 0.0100
+    Version 0.0200
 
 SYNOPSIS
-    Moose c<has> syntax is generally fine, but sometimes one gets bothered
+    Moose "has" syntax is generally fine, but sometimes one gets bothered
     with the constant typing of string quotes for things. MooseX::Types
     exists and in many ways reduces the need for constant string creation.
 
@@ -99,13 +99,15 @@ EXPORT
     lazy
     lazy_build
     required
+    coerce
+    weak_ref
+    auto_deref
 
 EXPORT GROUPS
     :default
-        This exports 'ro' and 'rw' as basic constant-folded subs. That is
-        all. Same as c<:is>
+        This exports 'ro' and 'rw' as-is. That is all. Same as c<:is>
 
-    :is This exports 'ro' and 'rw' as basic constant folded subs.
+    :is This exports 'ro' and 'rw' as-is.
 
             has foo => (
                     isa => 'Str',
@@ -113,9 +115,13 @@ EXPORT GROUPS
                     required => 1,
             );
 
+        Previously this exported it as a string, now it exports it as a list
+        containing one item to disable constant folding which did spooky
+        things which I presently have no way to silence.
+
     :attrs
-        This exports "lazy" , "lazy_build" and "required" as subs that
-        assume positive.
+        This exports "lazy" , "lazy_build" and "required", "coerce",
+        "weak_ref" and "auto_deref" as subs that assume positive.
 
             has foo => (
                     required,
@@ -142,12 +148,12 @@ FUNCTIONS
     These you probably don't care about, they're all managed by
     Sub::Exporter and its stuff anyway.
 
-    rw  returns 'rw'
+    rw  returns "('rw')"
 
     attr_rw
         returns "('is','rw')"
 
-    ro  returns 'ro'
+    ro  returns "('ro')"
 
     attr_ro
         returns "('is','ro')"
@@ -160,6 +166,15 @@ FUNCTIONS
 
     lazy_build
         returns "('lazy_build',1)"
+
+    coerce
+        returns "('coerce',1)"
+
+    weak_ref
+        returns "('weak_ref',1)"
+
+    auto_deref
+        returns "('auto_deref',1)"
 
 AUTHOR
     Kent Fredric, "<kentnl at cpan.org>"

@@ -4,7 +4,6 @@ MANIFEST
 MANIFEST.SKIP
 META.yml
 Makefile.PL
-README
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
@@ -15,6 +14,10 @@ inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/MooseX/Has/Sugar.pm
 t/00-load.t
+t/04_values.t
+t/05_is.t
+t/06_attr_required.t
+t/07_attr_lazy_build.t
 t/boilerplate.t
 t/pod-coverage.t
 t/pod.t
