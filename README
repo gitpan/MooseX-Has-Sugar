@@ -2,7 +2,7 @@ NAME
     MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields.
 
 VERSION
-    Version 0.0200
+    Version 0.0300
 
 SYNOPSIS
     Moose "has" syntax is generally fine, but sometimes one gets bothered
@@ -12,7 +12,7 @@ SYNOPSIS
     Strings are a bit problematic though, due to whitespace etc, and you're
     not likely to get compile time warnings if you do them wrong.
 
-    The constant need to type => and '' is fine for one-off cases, but the
+    The constant need to type "=>" and '' is fine for one-off cases, but the
     instant you have more than about 4 attributes it starts to get annoying.
 
     The only problem I see with the approach given by this module is the
@@ -42,39 +42,8 @@ SYNOPSIS
   With this module
     ( and with MooseX::Types )
 
-   Basic "is" Expansion
         use MooseX::Types::Moose qw( Str );
-        use MooseX::Has::Sugar qw( :is );
-
-        has foo => (
-                isa => Str,
-                is  => ro,
-                required => 1,
-        );
-        has bar => (
-                isa => Str,
-                is => rw,
-                lazy_build => 1,
-        );
-
-   Attribute Expansions
-        use MooseX::Types::Moose qw( Str );
-        use MooseX::Has::Sugar qw( :is :attrs );
-
-        has foo => (
-                isa => Str,
-                is  => ro,
-                required,
-        );
-        has bar => (
-                isa => Str,
-                is => rw,
-                lazy_build,
-        );
-
-   Full Attribute Expansion
-        use MooseX::Types::Moose qw( Str );
-        use MooseX::Has::Sugar qw(  :allattrs );
+        use MooseX::Has::Sugar;
 
         has foo => (
                 isa => Str,
@@ -87,15 +56,53 @@ SYNOPSIS
                 lazy_build,
         );
 
+    Or even
+
+        use MooseX::Types::Moose qw( Str );
+        use MooseX::Has::Sugar;
+
+        has foo => ( isa => Str, ro,  required, );
+        has bar => ( isa => Str, rw,  lazy_build, );
+
+  Alternative Forms
+   Basic "is" Expansion Only
+    ( using MooseX::Has::Sugar::Minimal instead )
+
+        use MooseX::Types::Moose qw( Str );
+        use MooseX::Has::Sugar::Minimal;
+
+        has foo => (
+                isa => Str,
+                is  => ro,
+                required => 1,
+        );
+        has bar => (
+                isa => Str,
+                is => rw,
+                lazy_build => 1,
+        );
+
+   Attribute Expansions with Basic Expansions
+    ( Combining parts of this and MooseX::Has::Sugar::Minimal )
+
+        use MooseX::Types::Moose qw( Str );
+        use MooseX::Has::Sugar::Minimal;
+        use MooseX::Has::Sugar qw( :attrs );
+
+        has foo => (
+                isa => Str,
+                is  => ro,
+                required,
+        );
+        has bar => (
+                isa => Str,
+                is => rw,
+                lazy_build,
+        );
+
 EXPORT
-    Most of these exports just return either 1 string, or 2 strings, and
-    should fold in at compile time. Make sure to see "EXPORT_GROUPS" for
-    more.
-
-    rw  What this will be depends on your export requirements.
-
-    ro  What this will be depends on your export requirements.
-
+    rw
+    ro
     lazy
     lazy_build
     required
@@ -105,19 +112,13 @@ EXPORT
 
 EXPORT GROUPS
     :default
-        This exports 'ro' and 'rw' as-is. That is all. Same as c<:is>
+        Since 0.0300, this exports all our syntax, the same as ":attrs
+        :isattrs". Primarily because I found you generally want all the
+        sugar, not just part of it. This also gets rid of that nasty
+        exclusion logic.
 
-    :is This exports 'ro' and 'rw' as-is.
-
-            has foo => (
-                    isa => 'Str',
-                    is => ro,
-                    required => 1,
-            );
-
-        Previously this exported it as a string, now it exports it as a list
-        containing one item to disable constant folding which did spooky
-        things which I presently have no way to silence.
+    :is DEPRECATED. See MooseX::Has::Sugar::Minimal for the same
+        functionality
 
     :attrs
         This exports "lazy" , "lazy_build" and "required", "coerce",
@@ -129,8 +130,8 @@ EXPORT GROUPS
             );
 
     :isattrs
-        This exports "ro" and "rw" differently, so they behave as
-        stand-alone attrs like 'lazy' does.
+        This exports "ro" and "rw" as lists, so they behave as stand-alone
+        attrs like "lazy" does.
 
             has foo => (
                     required,
@@ -138,8 +139,7 @@ EXPORT GROUPS
                     ro,
             );
 
-        NOTE: This option is incompatible with :is as they export the same
-        symbols in different ways
+        NOTE: This option is incompatible with MooseX::Has::Sugar::Minimal
 
     :allattrs
         This is a shorthand for qw( :isattrs :attrs )
@@ -148,15 +148,9 @@ FUNCTIONS
     These you probably don't care about, they're all managed by
     Sub::Exporter and its stuff anyway.
 
-    rw  returns "('rw')"
+    rw  returns "('is','rw')"
 
-    attr_rw
-        returns "('is','rw')"
-
-    ro  returns "('ro')"
-
-    attr_ro
-        returns "('is','ro')"
+    ro  returns "('is','ro')"
 
     lazy
         returns "('lazy',1)"

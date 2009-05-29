@@ -13,6 +13,7 @@ inc/Module/Install/Metadata.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/MooseX/Has/Sugar.pm
+lib/MooseX/Has/Sugar/Minimal.pm
 t/00-load.t
 t/04_values.t
 t/05_is.t
