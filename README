@@ -2,7 +2,7 @@ NAME
     MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields.
 
 VERSION
-    Version 0.0300
+    version 0.0400
 
 SYNOPSIS
     Moose "has" syntax is generally fine, but sometimes one gets bothered
@@ -103,6 +103,7 @@ SYNOPSIS
 EXPORT
     rw
     ro
+    bare
     lazy
     lazy_build
     required
@@ -130,8 +131,8 @@ EXPORT GROUPS
             );
 
     :isattrs
-        This exports "ro" and "rw" as lists, so they behave as stand-alone
-        attrs like "lazy" does.
+        This exports "ro", "rw" and "bare" as lists, so they behave as
+        stand-alone attrs like "lazy" does.
 
             has foo => (
                     required,
@@ -151,6 +152,9 @@ FUNCTIONS
     rw  returns "('is','rw')"
 
     ro  returns "('is','ro')"
+
+    bare
+        returns "('is','bare')"
 
     lazy
         returns "('lazy',1)"
