@@ -9,7 +9,7 @@ WriteMakefile(
   NAME      => 'MooseX::Has::Sugar',
   AUTHOR    => 'Kent\ Fredric\ \<kentnl\ at\ cpan\.org\>',
   ABSTRACT  => 'Sugar\ Syntax\ for\ moose\ \'has\'\ fields',
-  VERSION   => '0.0401',
+  VERSION   => '0.0402',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.21) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

@@ -1,5 +1,5 @@
 package CDeclareRo;
-our $VERSION = '0.0401';
+our $VERSION = '0.0402';
 
 
 # $Id:$
