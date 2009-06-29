@@ -1,9 +1,11 @@
 package MooseX::Has::Sugar;
+our $VERSION = '0.0401';
+
+
+# ABSTRACT: Sugar Syntax for moose 'has' fields
 
 use warnings;
 use strict;
-
-our $VERSION = '0.0400';
 
 use Carp          ();
 use Sub::Exporter ();
@@ -67,15 +69,18 @@ sub auto_deref() {
 }
 1;
 
+
 __END__
+
+=pod
 
 =head1 NAME
 
-MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields.
+MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields
 
 =head1 VERSION
 
-version 0.0400
+version 0.0401
 
 =head1 SYNOPSIS
 
@@ -181,7 +186,6 @@ Or even
             lazy_build,
     );
 
-
 =head1 EXPORT
 
 =over 4
@@ -204,7 +208,7 @@ Or even
 
 =item auto_deref
 
-=back
+=back 
 
 =head1 EXPORT GROUPS
 
@@ -247,7 +251,7 @@ B<NOTE: This option is incompatible with L<MooseX::Has::Sugar::Minimal>>
 
 This is  a shorthand for  qw( :isattrs :attrs )
 
-=back
+=back 
 
 =head1 FUNCTIONS
 
@@ -292,11 +296,7 @@ returns C<('weak_ref',1)>
 
 returns C<('auto_deref',1)>
 
-=back
-
-=head1 AUTHOR
-
-Kent Fredric, C<< <kentnl at cpan.org> >>
+=back 
 
 =head1 BUGS
 
@@ -312,7 +312,6 @@ as I make changes.
 You can find documentation for this module with the perldoc command.
 
     perldoc MooseX::Has::Sugar
-
 
 You can also look for information at:
 
@@ -334,20 +333,23 @@ L<http://cpanratings.perl.org/d/MooseX-Has-Sugar>
 
 L<http://search.cpan.org/dist/MooseX-Has-Sugar/>
 
-=back
-
+=back 
 
 =head1 ACKNOWLEDGEMENTS
 
 
-=head1 COPYRIGHT & LICENSE
 
-Copyright 2009 Kent Fredric, all rights reserved.
+=head1 AUTHOR
 
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+  Kent Fredric <kentnl at cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2009 by Kent Fredric.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut 
 
 
-=cut
-
-# End of MooseX::Has::Sugar

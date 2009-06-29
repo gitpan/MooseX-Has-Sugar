@@ -1,31 +1,28 @@
-use inc::Module::Install;
 
-name 'MooseX-Has-Sugar';
-all_from 'lib/MooseX/Has/Sugar.pm';
-author 'Kent Fredric <kentnl@cpan.org>';
-license 'perl';
-version '0.0400';
+use strict;
+use warnings;
 
-repository 'git://github.com/kentfredric/MooseX-Has-Sugar.git';
+use ExtUtils::MakeMaker;
 
-test_requires 'Test::More';
-test_requires 'Test::Exception';
-test_requires 'Moose', 0.83;
-test_requires 'Sub::Exporter';
-test_requires 'Find::Lib';
-test_requires 'Test::Pod::Coverage';
-test_requires 'Pod::Coverage';
-test_requires 'Test::Pod';
-test_requires 'namespace::autoclean';
-test_requires 'Test::use::ok';
-
-recommends 'MooseX::Types::Moose';
-
-# Exporting Symbols, most of the work
-requires 'Sub::Exporter';
-
-# GTFO Commands
-requires 'Carp';
-
-WriteAll;
-
+WriteMakefile(
+  DISTNAME  => 'MooseX-Has-Sugar',
+  NAME      => 'MooseX::Has::Sugar',
+  AUTHOR    => 'Kent\ Fredric\ \<kentnl\ at\ cpan\.org\>',
+  ABSTRACT  => 'Sugar\ Syntax\ for\ moose\ \'has\'\ fields',
+  VERSION   => '0.0401',
+  EXE_FILES => [ qw() ],
+  (eval { ExtUtils::MakeMaker->VERSION(6.21) } ? (LICENSE => 'perl') : ()),
+  PREREQ_PM    => {
+    "Pod::Coverage" => '0',
+    "namespace::autoclean" => '0',
+    "Test::Pod::Coverage" => '0',
+    "Test::Exception" => '0',
+    "Sub::Exporter" => '0',
+    "Carp" => '0',
+    "Test::Pod" => '0',
+    "Test::More" => '0',
+    "Find::Lib" => '0',
+    "Test::use::ok" => '0',
+    "Moose" => '0.84',
+  },
+);

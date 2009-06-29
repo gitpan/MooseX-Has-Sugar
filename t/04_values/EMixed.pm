@@ -1,4 +1,6 @@
 package EMixed;
+our $VERSION = '0.0401';
+
 
 # $Id:$
 use strict;

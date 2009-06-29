@@ -1,9 +1,11 @@
 package MooseX::Has::Sugar::Minimal;
+our $VERSION = '0.0401';
+
+
+# ABSTRACT: Less Sugary Syntax for moose 'has' fields
 
 use warnings;
 use strict;
-
-our $VERSION = '0.0400';
 
 use Sub::Exporter ();
 
@@ -31,16 +33,18 @@ sub rw() {
 
 1;
 
-__END__
+
+
+
+=pod
 
 =head1 NAME
 
 MooseX::Has::Sugar::Minimal - Less Sugary Syntax for moose 'has' fields
- than L<MooseX::Has::Sugar>
 
 =head1 VERSION
 
-Version 0.0400
+version 0.0401
 
 =head1 SYNOPSIS
 
@@ -61,7 +65,6 @@ and C<rw> functions, the way L<MooseX::Has::Sugar> used to with C<:is>;
             lazy_build => 1,
     );
 
-
 =head1 EXPORT
 
 =over 4
@@ -72,7 +75,7 @@ and C<rw> functions, the way L<MooseX::Has::Sugar> used to with C<:is>;
 
 =item bare
 
-=back
+=back 
 
 =head1 EXPORT GROUPS
 
@@ -86,7 +89,7 @@ Exports C<:is>
 
 Exports C<ro> and C<rw> and C<bare>
 
-=back
+=back 
 
 =head1 CONFLICTS
 
@@ -128,11 +131,7 @@ returns C<('ro')>
 
 returns C<('bare')>
 
-=back
-
-=head1 AUTHOR
-
-Kent Fredric, C<< <kentnl at cpan.org> >>
+=back 
 
 =head1 BUGS
 
@@ -149,7 +148,6 @@ I will be notified, and then you'll automatically be notified of progress
 You can find documentation for this module with the perldoc command.
 
     perldoc MooseX::Has::Sugar::Minimal
-
 
 You can also look for information at:
 
@@ -171,20 +169,26 @@ L<http://cpanratings.perl.org/d/MooseX-Has-Sugar>
 
 L<http://search.cpan.org/dist/MooseX-Has-Sugar/>
 
-=back
-
+=back 
 
 =head1 ACKNOWLEDGEMENTS
 
 
-=head1 COPYRIGHT & LICENSE
 
-Copyright 2009 Kent Fredric, all rights reserved.
+=head1 AUTHOR
 
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+  Kent Fredric <kentnl at cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2009 by Kent Fredric.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut 
 
 
-=cut
 
-# End of MooseX::Has::Sugar::Minimal
+__END__
+

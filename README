@@ -1,8 +1,8 @@
 NAME
-    MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields.
+    MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields
 
 VERSION
-    version 0.0400
+    version 0.0401
 
 SYNOPSIS
     Moose "has" syntax is generally fine, but sometimes one gets bothered
@@ -174,9 +174,6 @@ FUNCTIONS
     auto_deref
         returns "('auto_deref',1)"
 
-AUTHOR
-    Kent Fredric, "<kentnl at cpan.org>"
-
 BUGS
     Please report any bugs or feature requests to "bug-moosex-has-extras at
     rt.cpan.org", or through the web interface at
@@ -208,9 +205,12 @@ SUPPORT
         <http://search.cpan.org/dist/MooseX-Has-Sugar/>
 
 ACKNOWLEDGEMENTS
-COPYRIGHT & LICENSE
-    Copyright 2009 Kent Fredric, all rights reserved.
+AUTHOR
+      Kent Fredric <kentnl at cpan.org>
 
-    This program is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2009 by Kent Fredric.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 
