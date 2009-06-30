@@ -1,5 +1,5 @@
 package AMinimal;
-our $VERSION = '0.0402';
+our $VERSION = '0.0403';
 
 
 # $Id:$

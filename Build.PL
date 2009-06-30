@@ -13,13 +13,10 @@ my $build = Module::Build->new(
 "Kent\ Fredric\ \<kentnl\ at\ cpan\.org\>",
   ],
   requires      => {
-    "Pod::Coverage" => '0',
     "namespace::autoclean" => '0',
-    "Test::Pod::Coverage" => '0',
     "Test::Exception" => '0',
     "Sub::Exporter" => '0',
     "Carp" => '0',
-    "Test::Pod" => '0',
     "Test::More" => '0',
     "Find::Lib" => '0',
     "Test::use::ok" => '0',

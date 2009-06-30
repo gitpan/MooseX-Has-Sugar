@@ -1,5 +1,5 @@
 package MooseX::Has::Sugar::Minimal;
-our $VERSION = '0.0402';
+our $VERSION = '0.0403';
 
 
 # ABSTRACT: Less Sugary Syntax for moose 'has' fields
@@ -44,7 +44,7 @@ MooseX::Has::Sugar::Minimal - Less Sugary Syntax for moose 'has' fields
 
 =head1 VERSION
 
-version 0.0402
+version 0.0403
 
 =head1 SYNOPSIS
 

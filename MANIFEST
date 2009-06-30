@@ -22,6 +22,5 @@ t/06_attr_required.t
 t/06_attr_required/TestPackage.pm
 t/07_attr_lazy_build.t
 t/07_attr_lazy_build/TestPackage.pm
-t/boilerplate.t
-t/pod-coverage.t
-t/pod.t
+t/author-boilerplate.t
+t/author-pod.t

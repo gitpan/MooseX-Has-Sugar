@@ -2,22 +2,27 @@ NAME
     MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields
 
 VERSION
-    version 0.0402
+    version 0.0403
 
 SYNOPSIS
     Moose "has" syntax is generally fine, but sometimes one gets bothered
     with the constant typing of string quotes for things. MooseX::Types
     exists and in many ways reduces the need for constant string creation.
 
-    Strings are a bit problematic though, due to whitespace etc, and you're
-    not likely to get compile time warnings if you do them wrong.
-
+  Primary Benefits at a Glance
+   Reduced Typing in "has" declarations.
     The constant need to type "=>" and '' is fine for one-off cases, but the
     instant you have more than about 4 attributes it starts to get annoying.
 
-    The only problem I see with the approach given by this module is the
-    potential of an extra level of indirection. But its a far lesser evil in
-    my mind than the alternative.
+   More compact declarations.
+    Reduces much of the redundant typing in most cases, which makes your
+    life easier, and makes it take up less visual space, which makes it
+    faster to read.
+
+   No String Worries
+    Strings are often problematic, due to whitespace etc. Noted that if you
+    do happen to mess them up, Moose should at *least* warn you that you've
+    done something daft. Using this alleviates that worry.
 
   Before this Module.
    Classical Moose
