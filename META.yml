@@ -12,6 +12,7 @@ requires:
   Carp: 0
   Find::Lib: 0
   Moose: 0.84
+  MooseX::Types::Moose: 0
   Sub::Exporter: 0
   Test::Exception: 0
   Test::More: 0
@@ -19,4 +20,4 @@ requires:
   namespace::autoclean: 0
 resources:
   repository: git://github.com/kentfredric/MooseX-Has-Sugar.git
-version: 0.0403
+version: 0.0404

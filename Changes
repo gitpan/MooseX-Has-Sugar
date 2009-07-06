@@ -1,5 +1,8 @@
 Revision history for MooseX-Has-Sugar
 
+0.0404    2009-07-06 03:34:10 UTC
+          Added Saccharin, experimental sugars.
+
 0.0403    2009-06-30 13:56:07 UTC
           Using Dist::Zilla's handy author-tests feature
           Revised Docmentation a little to be more correct

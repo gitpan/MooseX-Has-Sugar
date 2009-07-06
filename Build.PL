@@ -13,6 +13,7 @@ my $build = Module::Build->new(
 "Kent\ Fredric\ \<kentnl\ at\ cpan\.org\>",
   ],
   requires      => {
+    "MooseX::Types::Moose" => '0',
     "namespace::autoclean" => '0',
     "Test::Exception" => '0',
     "Sub::Exporter" => '0',

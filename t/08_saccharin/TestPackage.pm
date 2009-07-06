@@ -8,18 +8,19 @@ use warnings;
 use Moose;
 use namespace::autoclean;
 
-use MooseX::Has::Sugar;
+use MooseX::Has::Sugar::Saccharin;
+use MooseX::Types::Moose (':all');
 
-has roattr => ( isa => 'Str', is => 'ro', lazy_build, );
+has roattr => lazy_build ro Str;
 
-has rwattr => ( isa => 'Str', is => 'rw', lazy_build, );
+has rwattr => lazy_build rw Str;
 
 sub _build_rwattr {
-    return 'y';
+  return 'y';
 }
 
 sub _build_roattr {
-    return 'y';
+  return 'y';
 }
 
 __PACKAGE__->meta->make_immutable;

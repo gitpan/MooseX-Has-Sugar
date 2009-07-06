@@ -7,13 +7,14 @@
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
    "generated_by" : "Dist::Zilla::Plugin::MetaJSON version 1.091610",
-   "version" : "0.0403",
+   "version" : "0.0404",
    "name" : "MooseX-Has-Sugar",
    "author" : [
       "Kent Fredric <kentnl at cpan.org>"
    ],
    "license" : "perl",
    "requires" : {
+      "MooseX::Types::Moose" : "0",
       "namespace::autoclean" : "0",
       "Test::Exception" : "0",
       "Sub::Exporter" : "0",

@@ -1,5 +1,5 @@
 package MooseX::Has::Sugar;
-our $VERSION = '0.0403';
+our $VERSION = '0.0404';
 
 
 # ABSTRACT: Sugar Syntax for moose 'has' fields
@@ -80,7 +80,7 @@ MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields
 
 =head1 VERSION
 
-version 0.0403
+version 0.0404
 
 =head1 SYNOPSIS
 
@@ -216,7 +216,7 @@ Or even
 
 =item auto_deref
 
-=back 
+=back
 
 =head1 EXPORT GROUPS
 
@@ -259,7 +259,7 @@ B<NOTE: This option is incompatible with L<MooseX::Has::Sugar::Minimal>>
 
 This is  a shorthand for  qw( :isattrs :attrs )
 
-=back 
+=back
 
 =head1 FUNCTIONS
 
@@ -304,7 +304,7 @@ returns C<('weak_ref',1)>
 
 returns C<('auto_deref',1)>
 
-=back 
+=back
 
 =head1 BUGS
 
@@ -341,11 +341,9 @@ L<http://cpanratings.perl.org/d/MooseX-Has-Sugar>
 
 L<http://search.cpan.org/dist/MooseX-Has-Sugar/>
 
-=back 
+=back
 
 =head1 ACKNOWLEDGEMENTS
-
-
 
 =head1 AUTHOR
 
@@ -358,6 +356,6 @@ This software is copyright (c) 2009 by Kent Fredric.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
+=cut
 
 

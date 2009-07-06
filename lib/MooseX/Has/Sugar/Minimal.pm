@@ -1,5 +1,5 @@
 package MooseX::Has::Sugar::Minimal;
-our $VERSION = '0.0403';
+our $VERSION = '0.0404';
 
 
 # ABSTRACT: Less Sugary Syntax for moose 'has' fields
@@ -44,7 +44,7 @@ MooseX::Has::Sugar::Minimal - Less Sugary Syntax for moose 'has' fields
 
 =head1 VERSION
 
-version 0.0403
+version 0.0404
 
 =head1 SYNOPSIS
 
@@ -75,7 +75,7 @@ and C<rw> functions, the way L<MooseX::Has::Sugar> used to with C<:is>;
 
 =item bare
 
-=back 
+=back
 
 =head1 EXPORT GROUPS
 
@@ -89,7 +89,7 @@ Exports C<:is>
 
 Exports C<ro> and C<rw> and C<bare>
 
-=back 
+=back
 
 =head1 CONFLICTS
 
@@ -131,7 +131,7 @@ returns C<('ro')>
 
 returns C<('bare')>
 
-=back 
+=back
 
 =head1 BUGS
 
@@ -169,11 +169,9 @@ L<http://cpanratings.perl.org/d/MooseX-Has-Sugar>
 
 L<http://search.cpan.org/dist/MooseX-Has-Sugar/>
 
-=back 
+=back
 
 =head1 ACKNOWLEDGEMENTS
-
-
 
 =head1 AUTHOR
 
@@ -186,7 +184,7 @@ This software is copyright (c) 2009 by Kent Fredric.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
+=cut
 
 
 
