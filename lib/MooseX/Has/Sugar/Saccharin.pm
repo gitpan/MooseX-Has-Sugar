@@ -6,7 +6,7 @@ BEGIN {
   $MooseX::Has::Sugar::Saccharin::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::Has::Sugar::Saccharin::VERSION = '0.05070420';
+  $MooseX::Has::Sugar::Saccharin::VERSION = '0.05070421';
 }
 
 # ABSTRACT: Experimental sweetness
@@ -129,7 +129,7 @@ MooseX::Has::Sugar::Saccharin - Experimental sweetness
 
 =head1 VERSION
 
-version 0.05070420
+version 0.05070421
 
 =head1 SYNOPSIS
 

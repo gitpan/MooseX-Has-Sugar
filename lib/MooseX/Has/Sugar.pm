@@ -6,7 +6,7 @@ BEGIN {
   $MooseX::Has::Sugar::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::Has::Sugar::VERSION = '0.05070420';
+  $MooseX::Has::Sugar::VERSION = '0.05070421';
 }
 
 # ABSTRACT: Sugar Syntax for moose 'has' fields
@@ -97,7 +97,7 @@ MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields
 
 =head1 VERSION
 
-version 0.05070420
+version 0.05070421
 
 =head1 SYNOPSIS
 

@@ -6,7 +6,7 @@ BEGIN {
   $MooseX::Has::Sugar::Minimal::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $MooseX::Has::Sugar::Minimal::VERSION = '0.05070420';
+  $MooseX::Has::Sugar::Minimal::VERSION = '0.05070421';
 }
 
 # ABSTRACT: Less Sugary Syntax for moose 'has' fields
@@ -52,7 +52,7 @@ MooseX::Has::Sugar::Minimal - Less Sugary Syntax for moose 'has' fields
 
 =head1 VERSION
 
-version 0.05070420
+version 0.05070421
 
 =head1 SYNOPSIS
 
